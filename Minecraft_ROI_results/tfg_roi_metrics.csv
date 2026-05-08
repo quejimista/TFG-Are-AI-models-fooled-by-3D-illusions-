@@ -1,0 +1,11 @@
+category,image,model,roi_id,area_px,mean_intensity,gap_with_prev_roi
+---,CATEGORY: CONVERGING LINES,---,---,---,---,---
+---,CATEGORY: CONVERGING LINES,---,---,---,---,---
+Converging Lines,cmp_TOP_BOTTOM_bias.png,orig,1,5329,143.89,0.0
+Converging Lines,cmp_TOP_BOTTOM_bias.png,v1,1,5329,65.2,0.0
+Converging Lines,cmp_TOP_BOTTOM_bias.png,v2,1,5329,59.87,0.0
+Converging Lines,cmp_TOP_BOTTOM_bias.png,v3,1,5329,108.95,0.0
+Converging Lines,cmp_TOP_BOTTOM_bias.png,orig,2,4352,145.47,1.58
+Converging Lines,cmp_TOP_BOTTOM_bias.png,v1,2,4352,32.54,32.66
+Converging Lines,cmp_TOP_BOTTOM_bias.png,v2,2,4352,39.64,20.23
+Converging Lines,cmp_TOP_BOTTOM_bias.png,v3,2,4352,115.35,6.4

@@ -1,0 +1,20 @@
+Tested on extraflat world for easier building. I decided the floor to be Gray concrete, the reason is to avoid possible biases with blocks like Grass or dirt,
+which have patterns. This is a solid block.
+
+
+- FOV: 70 (Default)
+- Lighting: Smooth Lighting (MAX): Create better shadows.
+- Clouds: OFF
+- Particles: MINIMUM
+- Fog: OFF
+- Entity shadows: OFF
+- Graphics: Fancy
+- Dynamic Lighting: NO
+
+I strictly do each time /time set noon to place the sun just above 90º
+F1 to hide the HUD
+
+I originally thought in downloading shaders (They upgrade the graphical aspect of the game and add better shadows). However, I discarded the idea because they add unwanted
+effects such as bloom, lens flare, etc. Potentially making the results worse. I have seen that they may also unfocus the further blocks.
+
+
