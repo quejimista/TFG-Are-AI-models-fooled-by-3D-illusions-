@@ -201,3 +201,144 @@ Impossible objects,cmp_penrose_triangle_adapted.png,v1,2,1989,87.65,35.18
 Impossible objects,cmp_penrose_triangle_adapted.png,v2,2,1989,91.49,26.91
 Impossible objects,cmp_penrose_triangle_adapted.png,v3,2,1989,131.7,48.52
 ---,CATEGORY: SHADING AND ILLUMINATION,---,---,---,---,---
+---,CATEGORY: CONVERGING LINES,---,---,---,---,---
+Converging Lines,cmp_converging_tunnel.png,orig,1,1520,121.36,0.0
+Converging Lines,cmp_converging_tunnel.png,v1,1,1520,95.39,0.0
+Converging Lines,cmp_converging_tunnel.png,v2,1,1520,104.54,0.0
+Converging Lines,cmp_converging_tunnel.png,v3,1,1520,118.0,0.0
+Converging Lines,cmp_converging_tunnel.png,orig,2,720,152.16,30.8
+Converging Lines,cmp_converging_tunnel.png,v1,2,720,92.38,3.01
+Converging Lines,cmp_converging_tunnel.png,v2,2,720,101.68,2.86
+Converging Lines,cmp_converging_tunnel.png,v3,2,720,117.96,0.04
+Converging Lines,cmp_converging_tunnel_zoomed.png,orig,1,4284,135.69,0.0
+Converging Lines,cmp_converging_tunnel_zoomed.png,v1,1,4284,84.19,0.0
+Converging Lines,cmp_converging_tunnel_zoomed.png,v2,1,4284,143.51,0.0
+Converging Lines,cmp_converging_tunnel_zoomed.png,v3,1,4284,119.65,0.0
+Converging Lines,cmp_converging_tunnel_zoomed.png,orig,2,3500,143.61,7.92
+Converging Lines,cmp_converging_tunnel_zoomed.png,v1,2,3500,58.24,25.95
+Converging Lines,cmp_converging_tunnel_zoomed.png,v2,2,3500,80.75,62.76
+Converging Lines,cmp_converging_tunnel_zoomed.png,v3,2,3500,46.35,73.3
+---,CATEGORY: DEPTH AMBIGUITY,---,---,---,---,---
+Depth ambiguity,cmp_concave_convex_cube.png,orig,1,3978,137.2,0.0
+Depth ambiguity,cmp_concave_convex_cube.png,v1,1,3978,17.47,0.0
+Depth ambiguity,cmp_concave_convex_cube.png,v2,1,3978,25.45,0.0
+Depth ambiguity,cmp_concave_convex_cube.png,v3,1,3978,25.79,0.0
+Depth ambiguity,cmp_concave_convex_cube.png,orig,2,10504,120.23,16.97
+Depth ambiguity,cmp_concave_convex_cube.png,v1,2,10504,6.62,10.85
+Depth ambiguity,cmp_concave_convex_cube.png,v2,2,10504,9.34,16.11
+Depth ambiguity,cmp_concave_convex_cube.png,v3,2,10504,84.93,59.14
+Depth ambiguity,cmp_concave_convex_cube_zoomed.png,orig,1,10168,166.21,0.0
+Depth ambiguity,cmp_concave_convex_cube_zoomed.png,v1,1,10168,64.12,0.0
+Depth ambiguity,cmp_concave_convex_cube_zoomed.png,v2,1,10168,60.28,0.0
+Depth ambiguity,cmp_concave_convex_cube_zoomed.png,v3,1,10168,53.42,0.0
+Depth ambiguity,cmp_concave_convex_cube_zoomed.png,orig,2,172634,120.24,45.97
+Depth ambiguity,cmp_concave_convex_cube_zoomed.png,v1,2,172634,43.76,20.36
+Depth ambiguity,cmp_concave_convex_cube_zoomed.png,v2,2,172634,45.89,14.39
+Depth ambiguity,cmp_concave_convex_cube_zoomed.png,v3,2,172634,45.44,7.98
+Depth ambiguity,cmp_concave_convex_furnace.png,orig,1,9900,146.75,0.0
+Depth ambiguity,cmp_concave_convex_furnace.png,v1,1,9900,26.1,0.0
+Depth ambiguity,cmp_concave_convex_furnace.png,v2,1,9900,29.57,0.0
+Depth ambiguity,cmp_concave_convex_furnace.png,v3,1,9900,55.66,0.0
+Depth ambiguity,cmp_concave_convex_furnace.png,orig,2,19305,92.82,53.93
+Depth ambiguity,cmp_concave_convex_furnace.png,v1,2,19305,5.84,20.26
+Depth ambiguity,cmp_concave_convex_furnace.png,v2,2,19305,9.95,19.62
+Depth ambiguity,cmp_concave_convex_furnace.png,v3,2,19305,105.42,49.76
+Depth ambiguity,cmp_concave_convex_furnace_zoomed.png,orig,1,14248,166.28,0.0
+Depth ambiguity,cmp_concave_convex_furnace_zoomed.png,v1,1,14248,58.51,0.0
+Depth ambiguity,cmp_concave_convex_furnace_zoomed.png,v2,1,14248,58.16,0.0
+Depth ambiguity,cmp_concave_convex_furnace_zoomed.png,v3,1,14248,81.27,0.0
+Depth ambiguity,cmp_concave_convex_furnace_zoomed.png,orig,2,115898,89.46,76.82
+Depth ambiguity,cmp_concave_convex_furnace_zoomed.png,v1,2,115898,35.01,23.5
+Depth ambiguity,cmp_concave_convex_furnace_zoomed.png,v2,2,115898,40.05,18.11
+Depth ambiguity,cmp_concave_convex_furnace_zoomed.png,v3,2,115898,53.02,28.25
+Depth ambiguity,cmp_neckers_cube.png,orig,1,2409,115.05,0.0
+Depth ambiguity,cmp_neckers_cube.png,v1,1,2409,95.75,0.0
+Depth ambiguity,cmp_neckers_cube.png,v2,1,2409,69.64,0.0
+Depth ambiguity,cmp_neckers_cube.png,v3,1,2409,217.46,0.0
+Depth ambiguity,cmp_neckers_cube.png,orig,2,3498,126.33,11.28
+Depth ambiguity,cmp_neckers_cube.png,v1,2,3498,191.14,95.39
+Depth ambiguity,cmp_neckers_cube.png,v2,2,3498,200.22,130.58
+Depth ambiguity,cmp_neckers_cube.png,v3,2,3498,234.29,16.83
+Depth ambiguity,cmp_schroeder_stairs.png,orig,1,1702,170.84,0.0
+Depth ambiguity,cmp_schroeder_stairs.png,v1,1,1702,44.65,0.0
+Depth ambiguity,cmp_schroeder_stairs.png,v2,1,1702,50.84,0.0
+Depth ambiguity,cmp_schroeder_stairs.png,v3,1,1702,79.06,0.0
+Depth ambiguity,cmp_schroeder_stairs.png,orig,2,2156,147.58,23.26
+Depth ambiguity,cmp_schroeder_stairs.png,v1,2,2156,27.22,17.43
+Depth ambiguity,cmp_schroeder_stairs.png,v2,2,2156,33.54,17.3
+Depth ambiguity,cmp_schroeder_stairs.png,v3,2,2156,55.69,23.37
+Depth ambiguity,cmp_schroeder_stairs_lantern.png,orig,1,2058,150.77,0.0
+Depth ambiguity,cmp_schroeder_stairs_lantern.png,v1,1,2058,32.83,0.0
+Depth ambiguity,cmp_schroeder_stairs_lantern.png,v2,1,2058,43.12,0.0
+Depth ambiguity,cmp_schroeder_stairs_lantern.png,v3,1,2058,90.41,0.0
+Depth ambiguity,cmp_schroeder_stairs_lantern.png,orig,2,1760,109.14,41.63
+Depth ambiguity,cmp_schroeder_stairs_lantern.png,v1,2,1760,15.67,17.16
+Depth ambiguity,cmp_schroeder_stairs_lantern.png,v2,2,1760,25.68,17.44
+Depth ambiguity,cmp_schroeder_stairs_lantern.png,v3,2,1760,67.21,23.2
+Depth ambiguity,cmp_schroeder_stairs_rotated.png,orig,1,2116,142.05,0.0
+Depth ambiguity,cmp_schroeder_stairs_rotated.png,v1,1,2116,48.36,0.0
+Depth ambiguity,cmp_schroeder_stairs_rotated.png,v2,1,2116,43.41,0.0
+Depth ambiguity,cmp_schroeder_stairs_rotated.png,v3,1,2116,219.38,0.0
+Depth ambiguity,cmp_schroeder_stairs_rotated.png,orig,2,1974,151.85,9.8
+Depth ambiguity,cmp_schroeder_stairs_rotated.png,v1,2,1974,76.23,27.87
+Depth ambiguity,cmp_schroeder_stairs_rotated.png,v2,2,1974,68.87,25.46
+Depth ambiguity,cmp_schroeder_stairs_rotated.png,v3,2,1974,209.1,10.28
+---,CATEGORY: FORCED PERSPECTIVE,---,---,---,---,---
+Forced perspective,cmp_fake_block.png,orig,1,14464,34.49,0.0
+Forced perspective,cmp_fake_block.png,v1,1,14464,26.43,0.0
+Forced perspective,cmp_fake_block.png,v2,1,14464,35.64,0.0
+Forced perspective,cmp_fake_block.png,v3,1,14464,86.65,0.0
+Forced perspective,cmp_fake_block.png,orig,2,44084,109.29,74.8
+Forced perspective,cmp_fake_block.png,v1,2,44084,21.18,5.25
+Forced perspective,cmp_fake_block.png,v2,2,44084,17.04,18.6
+Forced perspective,cmp_fake_block.png,v3,2,44084,57.4,29.25
+Forced perspective,cmp_ladder.png,orig,1,702,136.37,0.0
+Forced perspective,cmp_ladder.png,v1,1,702,77.16,0.0
+Forced perspective,cmp_ladder.png,v2,1,702,94.94,0.0
+Forced perspective,cmp_ladder.png,v3,1,702,154.78,0.0
+Forced perspective,cmp_ladder.png,orig,2,5187,236.79,100.42
+Forced perspective,cmp_ladder.png,v1,2,5187,77.77,0.61
+Forced perspective,cmp_ladder.png,v2,2,5187,89.79,5.15
+Forced perspective,cmp_ladder.png,v3,2,5187,159.51,4.73
+---,CATEGORY: IMPOSSIBLE OBJECTS,---,---,---,---,---
+Impossible objects,cmp_escher_waterfall.png,orig,1,3420,65.5,0.0
+Impossible objects,cmp_escher_waterfall.png,v1,1,3420,112.99,0.0
+Impossible objects,cmp_escher_waterfall.png,v2,1,3420,108.8,0.0
+Impossible objects,cmp_escher_waterfall.png,v3,1,3420,187.62,0.0
+Impossible objects,cmp_escher_waterfall.png,orig,2,2436,91.5,26.0
+Impossible objects,cmp_escher_waterfall.png,v1,2,2436,83.34,29.65
+Impossible objects,cmp_escher_waterfall.png,v2,2,2436,82.22,26.58
+Impossible objects,cmp_escher_waterfall.png,v3,2,2436,153.06,34.56
+Impossible objects,cmp_penrose_triangle.png,orig,1,726,170.22,0.0
+Impossible objects,cmp_penrose_triangle.png,v1,1,726,107.05,0.0
+Impossible objects,cmp_penrose_triangle.png,v2,1,726,107.06,0.0
+Impossible objects,cmp_penrose_triangle.png,v3,1,726,186.4,0.0
+Impossible objects,cmp_penrose_triangle.png,orig,2,2046,156.25,13.97
+Impossible objects,cmp_penrose_triangle.png,v1,2,2046,137.39,30.34
+Impossible objects,cmp_penrose_triangle.png,v2,2,2046,143.25,36.19
+Impossible objects,cmp_penrose_triangle.png,v3,2,2046,235.3,48.9
+Impossible objects,cmp_penrose_triangle_adapted.png,orig,1,924,174.53,0.0
+Impossible objects,cmp_penrose_triangle_adapted.png,v1,1,924,100.4,0.0
+Impossible objects,cmp_penrose_triangle_adapted.png,v2,1,924,105.69,0.0
+Impossible objects,cmp_penrose_triangle_adapted.png,v3,1,924,137.68,0.0
+Impossible objects,cmp_penrose_triangle_adapted.png,orig,2,616,144.5,30.03
+Impossible objects,cmp_penrose_triangle_adapted.png,v1,2,616,71.79,28.61
+Impossible objects,cmp_penrose_triangle_adapted.png,v2,2,616,69.47,36.22
+Impossible objects,cmp_penrose_triangle_adapted.png,v3,2,616,124.91,12.77
+Impossible objects,cmp_penrose_triangle_zoomed.png,orig,1,19570,149.41,0.0
+Impossible objects,cmp_penrose_triangle_zoomed.png,v1,1,19570,205.62,0.0
+Impossible objects,cmp_penrose_triangle_zoomed.png,v2,1,19570,194.92,0.0
+Impossible objects,cmp_penrose_triangle_zoomed.png,v3,1,19570,226.8,0.0
+Impossible objects,cmp_penrose_triangle_zoomed.png,orig,2,5610,184.67,35.26
+Impossible objects,cmp_penrose_triangle_zoomed.png,v1,2,5610,96.24,109.38
+Impossible objects,cmp_penrose_triangle_zoomed.png,v2,2,5610,105.15,89.77
+Impossible objects,cmp_penrose_triangle_zoomed.png,v3,2,5610,173.64,53.16
+---,CATEGORY: SHADING AND ILLUMINATION,---,---,---,---,---
+Shading and illumination,cmp_zebra_crossing.png,orig,1,3240,134.35,0.0
+Shading and illumination,cmp_zebra_crossing.png,v1,1,3240,136.86,0.0
+Shading and illumination,cmp_zebra_crossing.png,v2,1,3240,143.03,0.0
+Shading and illumination,cmp_zebra_crossing.png,v3,1,3240,228.49,0.0
+Shading and illumination,cmp_zebra_crossing.png,orig,2,1581,204.88,70.53
+Shading and illumination,cmp_zebra_crossing.png,v1,2,1581,79.07,57.79
+Shading and illumination,cmp_zebra_crossing.png,v2,2,1581,85.68,57.35
+Shading and illumination,cmp_zebra_crossing.png,v3,2,1581,213.01,15.48
