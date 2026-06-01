@@ -342,3 +342,21 @@ Shading and illumination,cmp_zebra_crossing.png,orig,2,1581,204.88,70.53
 Shading and illumination,cmp_zebra_crossing.png,v1,2,1581,79.07,57.79
 Shading and illumination,cmp_zebra_crossing.png,v2,2,1581,85.68,57.35
 Shading and illumination,cmp_zebra_crossing.png,v3,2,1581,213.01,15.48
+---,CATEGORY: CONVERGING LINES,---,---,---,---,---
+---,CATEGORY: DEPTH AMBIGUITY,---,---,---,---,---
+---,CATEGORY: FORCED PERSPECTIVE,---,---,---,---,---
+---,CATEGORY: IMPOSSIBLE OBJECTS,---,---,---,---,---
+---,CATEGORY: SHADING AND ILLUMINATION,---,---,---,---,---
+---,CATEGORY: CONVERGING LINES,---,---,---,---,---
+---,CATEGORY: DEPTH AMBIGUITY,---,---,---,---,---
+---,CATEGORY: FORCED PERSPECTIVE,---,---,---,---,---
+Forced perspective,cmp_depth_incongruence.png,orig,1,7755,40.24,0.0
+Forced perspective,cmp_depth_incongruence.png,v1,1,7755,60.42,0.0
+Forced perspective,cmp_depth_incongruence.png,v2,1,7755,67.38,0.0
+Forced perspective,cmp_depth_incongruence.png,v3,1,7755,185.19,0.0
+Forced perspective,cmp_depth_incongruence.png,orig,2,13760,40.79,0.55
+Forced perspective,cmp_depth_incongruence.png,v1,2,13760,40.67,19.75
+Forced perspective,cmp_depth_incongruence.png,v2,2,13760,48.66,18.72
+Forced perspective,cmp_depth_incongruence.png,v3,2,13760,192.2,7.01
+---,CATEGORY: IMPOSSIBLE OBJECTS,---,---,---,---,---
+---,CATEGORY: SHADING AND ILLUMINATION,---,---,---,---,---
