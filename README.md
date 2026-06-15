@@ -115,7 +115,7 @@ TFG/
 |   `-- psychophysics/            Auto-generated stimulus sequences (30 frames per experiment)
 |
 |-- results/
-|   |-- depth_maps/               Psychophysics comparison outputs (comp_* and comparison_*)
+|   |-- psychophysics/            PSE/JND cross-model comparison outputs (comp_* and comparison_*)
 |   |-- depth_map_comparisons/    Side-by-side depth map outputs (original + V1 + V2 + V3)
 |   |   |-- baseline_dataset/     Classic illusion dataset results
 |   |   |-- synthetic/            Corridor Illusion ablation results
@@ -329,6 +329,11 @@ are recorded per frame. The curve is modelled via linear interpolation to comput
   deviation of a cumulative Gaussian distribution
 
 A low JND (steep curve) indicates high sensitivity; a high JND indicates robustness.
+
+The cross-model comparison plots (files named comp_* and comparison_*) are saved to
+`results/psychophysics/`. These show the PSE and JND curves for all models side by side
+and are distinct from the ROI bounding-box outputs in `results/roi_analysis/` and the
+raw depth map comparisons in `results/depth_map_comparisons/`.
 
 ### Step 4: 3D mesh validation
 
