@@ -91,9 +91,8 @@ TFG/
 |-- README.md
 |
 |-- notebooks/
-|   |-- depth_anything1.ipynb     Main pipeline: V1, V2, V3 inference, ROI analysis,
+|   |-- tfg_pipeline.ipynb        Main pipeline: V1, V2, V3 inference, ROI analysis,
 |   |                             psychophysics generation and evaluation
-|   |-- depth_anything1.py        Script version of the main pipeline
 |   `-- CNN.ipynb                 MiDaS (CNN) inference pipeline
 |
 |-- data/
@@ -115,13 +114,38 @@ TFG/
 |   `-- psychophysics/            Auto-generated stimulus sequences (30 frames per experiment)
 |
 |-- results/
-|   |-- psychophysics/            PSE/JND cross-model comparison outputs (comp_* and comparison_*)
+|   |-- psychophysics/            PSE/JND cross-model comparison plots (comp_* and comparison_*)
 |   |-- depth_map_comparisons/    Side-by-side depth map outputs (original + V1 + V2 + V3)
-|   |   |-- baseline_dataset/     Classic illusion dataset results
-|   |   |-- synthetic/            Corridor Illusion ablation results
-|   |   |-- minecraft/            Minecraft experiment results
-|   |   |-- psychophysics/        Psychophysics sequence results
-|   |   `-- midas/                MiDaS outputs (same subcategory structure)
+|   |   |-- baseline_dataset/     Classic illusion dataset (one image per illusion)
+|   |   |   |-- converging/
+|   |   |   |-- depth_ambiguity/
+|   |   |   |-- forced_perspective/
+|   |   |   |-- impossible_objects/
+|   |   |   `-- shading/
+|   |   |-- synthetic/            Corridor Illusion ablation (one image per variant)
+|   |   |-- minecraft/            Minecraft experiments, organised by category
+|   |   |   |-- converging_lines/
+|   |   |   |-- depth_ambiguity/
+|   |   |   |-- forced_perspective/
+|   |   |   |-- impossible_objects/
+|   |   |   `-- shading/
+|   |   |-- psychophysics/        Psychophysics sequences, organised by experiment
+|   |   |   |-- angle/
+|   |   |   |-- blur_bias/
+|   |   |   |-- contrast/
+|   |   |   |-- ebbinghaus/
+|   |   |   |-- face_shading/
+|   |   |   |-- figure_ground/
+|   |   |   |-- horizon/
+|   |   |   |-- kanizsa/
+|   |   |   |-- occlusion/
+|   |   |   |-- ponzo/
+|   |   |   |-- shadow_gap/
+|   |   |   |-- size/
+|   |   |   |-- size_vs_position/
+|   |   |   |-- texture_slant/
+|   |   |   `-- ypos/
+|   |   `-- midas/                MiDaS outputs (same subcategory structure as above)
 |   |       |-- baseline_dataset/
 |   |       |-- synthetic/
 |   |       |-- minecraft/
@@ -130,7 +154,16 @@ TFG/
 |   |   |-- baseline_dataset/
 |   |   |-- synthetic/
 |   |   |-- minecraft/
+|   |   |   |-- converging_lines/
+|   |   |   |-- depth_ambiguity/
+|   |   |   |-- forced_perspective/
+|   |   |   |-- impossible_objects/
+|   |   |   `-- shading/
 |   |   `-- psychophysics/
+|   |       |-- frames/           Per-frame ROI analysis images, one subfolder per experiment
+|   |       |-- summary/          PSE/JND summary plots (one per experiment)
+|   |       |-- videos/           MP4 videos of each psychophysics sequence
+|   |       `-- tfg_roi_metrics.csv   Full metrics database exported from the ROI tool
 |   `-- 3d_generations/           3D mesh files (.obj, .glb) from Hunyuan3D 2.1
 |
 |-- report/
@@ -201,7 +234,7 @@ Model weights are downloaded automatically from Hugging Face on the first run.
 All notebooks are in the `notebooks/` folder and use paths relative to that folder.
 Run them from inside `notebooks/`, or open them with Jupyter from the repo root.
 
-### Main pipeline: depth_anything1.ipynb
+### Main pipeline: tfg_pipeline.ipynb
 
 This notebook covers the full experimental pipeline for the Depth Anything models.
 
