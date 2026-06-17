@@ -93,85 +93,70 @@ TFG/
 |-- notebooks/
 |   |-- tfg_pipeline.ipynb        Main pipeline: V1, V2, V3 inference, ROI analysis,
 |   |                             psychophysics generation and evaluation
-|   `-- CNN.ipynb                 MiDaS (CNN) inference pipeline
+|   `-- CNN.ipynb                 MiDaS (CNN) inference, ROI analysis and PSE/JND analysis
 |
 |-- data/
-|   |-- dataset/                  Curated 3D illusion dataset (original stimulus images)
-|   |   |-- converging/
-|   |   |-- depth_ambiguity/
-|   |   |-- forced_perspective/
-|   |   |-- impossible_objects/
-|   |   `-- shading/
-|   |-- synthetic/
-|   |   `-- corridor_illusion/    Fifteen synthetic variants of the Corridor Illusion
-|   |-- minecraft/                Voxel laboratory screenshots captured in Minecraft
-|   |   |-- converging_lines/
-|   |   |-- depth_ambiguity/
-|   |   |-- forced_perspective/
-|   |   |-- impossible_objects/
-|   |   |-- shading/
-|   |   `-- Settings_Configuration.txt   Minecraft render settings used during capture
+|   |-- dataset/                  Curated 3D illusion dataset (30 original stimulus images)
+|   |-- synthetic/                Fifteen synthetic variants of the Corridor Illusion
+|   |-- minecraft/                Voxel laboratory screenshots captured in Minecraft, with
+|   |                             a Settings_Configuration.txt documenting render settings
 |   `-- psychophysics/            Auto-generated stimulus sequences (30 frames per experiment)
 |
 |-- results/
-|   |-- psychophysics/            PSE/JND cross-model comparison plots (comp_* and comparison_*)
 |   |-- depth_map_comparisons/    Side-by-side depth map outputs (original + V1 + V2 + V3)
-|   |   |-- baseline_dataset/     Classic illusion dataset (one image per illusion)
-|   |   |   |-- converging/
-|   |   |   |-- depth_ambiguity/
-|   |   |   |-- forced_perspective/
-|   |   |   |-- impossible_objects/
-|   |   |   `-- shading/
+|   |   |-- baseline_dataset/     Classic illusion dataset (30 images)
 |   |   |-- synthetic/            Corridor Illusion ablation (one image per variant)
-|   |   |-- minecraft/            Minecraft experiments, organised by category
-|   |   |   |-- converging_lines/
-|   |   |   |-- depth_ambiguity/
-|   |   |   |-- forced_perspective/
-|   |   |   |-- impossible_objects/
-|   |   |   `-- shading/
-|   |   |-- psychophysics/        Psychophysics sequences, organised by experiment
-|   |   |   |-- angle/
-|   |   |   |-- blur_bias/
-|   |   |   |-- contrast/
-|   |   |   |-- ebbinghaus/
-|   |   |   |-- face_shading/
-|   |   |   |-- figure_ground/
-|   |   |   |-- horizon/
-|   |   |   |-- kanizsa/
-|   |   |   |-- occlusion/
-|   |   |   |-- ponzo/
-|   |   |   |-- shadow_gap/
-|   |   |   |-- size/
-|   |   |   |-- size_vs_position/
-|   |   |   |-- texture_slant/
-|   |   |   `-- ypos/
-|   |   `-- midas/                MiDaS outputs (same subcategory structure as above)
+|   |   |-- minecraft/            Minecraft experiments
+|   |   |-- psychophysics/        Psychophysics sequences (30 frames x 15 experiments)
+|   |   `-- midas/                MiDaS outputs, same subcategory structure as above
 |   |       |-- baseline_dataset/
 |   |       |-- synthetic/
 |   |       |-- minecraft/
 |   |       `-- psychophysics/
 |   |-- roi_analysis/             ROI bounding-box annotations and CSV metric exports
-|   |   |-- baseline_dataset/
+|   |   |-- baseline_dataset/     Annotated images with mean intensity per ROI
 |   |   |-- synthetic/
-|   |   |-- minecraft/
-|   |   |   |-- converging_lines/
-|   |   |   |-- depth_ambiguity/
-|   |   |   |-- forced_perspective/
-|   |   |   |-- impossible_objects/
-|   |   |   `-- shading/
-|   |   `-- psychophysics/
-|   |       |-- frames/           Per-frame ROI analysis images, one subfolder per experiment
-|   |       |-- summary/          PSE/JND summary plots (one per experiment)
-|   |       |-- videos/           MP4 videos of each psychophysics sequence
-|   |       `-- tfg_roi_metrics.csv   Full metrics database exported from the ROI tool
+|   |   |-- psychophysics/
+|   |   |   |-- frames/           Per-frame ROI annotations (one subfolder per experiment)
+|   |   |   |-- summary/          Per-experiment summary plots
+|   |   |   |-- videos/           MP4 export of each psychophysics sequence
+|   |   |   `-- tfg_roi_metrics.csv   Metrics database for V1/V2/V3 (Depth Anything)
+|   |   `-- midas/                Same structure as above, for MiDaS
+|   |       |-- baseline_dataset/
+|   |       |-- synthetic/
+|   |       |-- minecraft/
+|   |       `-- psychophysics/    Includes its own tfg_roi_metrics.csv for MiDaS
+|   |-- psychophysics_analysis/   PSE/JND comparison plots for V1, V2 and V3
+|   |                             (comp_*, comp_pse_*, comparison_* per experiment)
+|   |-- psychophysics/
+|   |   `-- midas/                PSE/JND comparison plots for MiDaS, one subfolder per
+|   |                             experiment (angle, blur_bias, contrast, ebbinghaus,
+|   |                             face_shading, figure_ground, horizon, kanizsa,
+|   |                             occlusion, ponzo, shadow_gap, size, size_vs_position,
+|   |                             texture_slant, ypos)
 |   `-- 3d_generations/           3D mesh files (.obj, .glb) from Hunyuan3D 2.1
 |
+|-- reports/
+|   |-- Initial_Report.pdf        First delivery: motivation, objectives, state of the art,
+|   |                             methodology and work plan
+|   `-- Progress_report.pdf       Second delivery: work performed, results obtained up to
+|                                 that point, and updated hypotheses
+|
 |-- report/
-|   `-- tfg_final_report.tex      Final report in UAB/IEEE format (max 12 pages + appendix)
+|   |-- tfg_final_report.tex      Final report in UAB/IEEE format (max 12 pages + references)
+|   `-- figures/                  Image files referenced by the .tex via \includegraphics
 |
 `-- external/
     `-- depth-anything-3/         Depth Anything V3 source code (official repository)
 ```
+
+A short note on naming, since it can be confusing at first glance: `reports/` (plural)
+holds the two PDF deliverables submitted during the semester (initial and progress
+reports), while `report/` (singular) holds the final `.tex` report and its figures. Inside
+`results/`, `psychophysics_analysis/` holds the PSE/JND plots for Depth Anything
+(V1/V2/V3), while `psychophysics/midas/` holds the equivalent plots for MiDaS; this
+asymmetry comes from the two models being analysed with separate notebooks
+(`tfg_pipeline.ipynb` and `CNN.ipynb` respectively).
 
 ---
 
@@ -432,6 +417,11 @@ latexmk -pdf tfg_final_report.tex
 
 Figure files should be placed in `report/figures/` using the placeholder filenames
 defined in the .tex source.
+
+The two earlier deliverables submitted during the semester, the Initial Report and the
+Progress Report, are kept as PDFs in `reports/Initial_Report.pdf` and
+`reports/Progress_report.pdf`. They document the evolution of the project's objectives
+and methodology, and are included in the dossier alongside the final report.
 
 ---
 
