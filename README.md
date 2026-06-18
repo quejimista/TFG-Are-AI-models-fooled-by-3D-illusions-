@@ -2,7 +2,7 @@
 
 Final Degree Project in Artificial Intelligence
 Escola d'Enginyeria (EE), Universitat Autonoma de Barcelona (UAB)
-Academic Year 2025/26
+Academic Year 2024/25
 
 Author: Ivan Martin Campoy (1673246@uab.cat)
 Supervisor: Alexandra Gomez Villa
@@ -89,6 +89,7 @@ choices.
 TFG/
 |
 |-- README.md
+|-- requirements.txt
 |
 |-- notebooks/
 |   |-- tfg_pipeline.ipynb        Main pipeline: V1, V2, V3 inference, ROI analysis,
@@ -96,7 +97,7 @@ TFG/
 |   `-- CNN.ipynb                 MiDaS (CNN) inference, ROI analysis and PSE/JND analysis
 |
 |-- data/
-|   |-- dataset/                  Curated 3D illusion dataset (30 original stimulus images)
+|   |-- dataset/                  Curated 3D illusion dataset (28 original stimulus images)
 |   |-- synthetic/                Fifteen synthetic variants of the Corridor Illusion
 |   |-- minecraft/                Voxel laboratory screenshots captured in Minecraft, with
 |   |                             a Settings_Configuration.txt documenting render settings
@@ -104,7 +105,7 @@ TFG/
 |
 |-- results/
 |   |-- depth_map_comparisons/    Side-by-side depth map outputs (original + V1 + V2 + V3)
-|   |   |-- baseline_dataset/     Classic illusion dataset (30 images)
+|   |   |-- baseline_dataset/     Classic illusion dataset (28 images)
 |   |   |-- synthetic/            Corridor Illusion ablation (one image per variant)
 |   |   |-- minecraft/            Minecraft experiments
 |   |   |-- psychophysics/        Psychophysics sequences (30 frames x 15 experiments)
@@ -139,10 +140,8 @@ TFG/
 |-- reports/
 |   |-- Initial_Report.pdf        First delivery: motivation, objectives, state of the art,
 |   |                             methodology and work plan
-|   `-- Progress_report.pdf       Second delivery: work performed, results obtained up to
-|                                 that point, and updated hypotheses
-|
-|-- report/
+|   |-- Progress_report.pdf       Second delivery: work performed, results obtained up to
+|   |                             that point, and updated hypotheses
 |   |-- tfg_final_report.tex      Final report in UAB/IEEE format (max 12 pages + references)
 |   `-- figures/                  Image files referenced by the .tex via \includegraphics
 |
@@ -150,13 +149,9 @@ TFG/
     `-- depth-anything-3/         Depth Anything V3 source code (official repository)
 ```
 
-A short note on naming, since it can be confusing at first glance: `reports/` (plural)
-holds the two PDF deliverables submitted during the semester (initial and progress
-reports), while `report/` (singular) holds the final `.tex` report and its figures. Inside
-`results/`, `psychophysics_analysis/` holds the PSE/JND plots for Depth Anything
-(V1/V2/V3), while `psychophysics/midas/` holds the equivalent plots for MiDaS; this
-asymmetry comes from the two models being analysed with separate notebooks
-(`tfg_pipeline.ipynb` and `CNN.ipynb` respectively).
+`reports/` holds all three written deliverables submitted throughout the semester: the
+Initial Report and Progress Report as PDFs, and the final report as a `.tex` source
+(compiled to PDF before submission) together with the figures it references.
 
 ---
 
@@ -187,10 +182,19 @@ source venv/bin/activate     # Linux / macOS
 
 ### Installing dependencies
 
+All dependencies are pinned in `requirements.txt`, exported directly from the
+development environment:
+
 ```bash
-pip install torch torchvision --index-url https://download.pytorch.org/whl/cu118
-pip install transformers pillow opencv-python matplotlib numpy pandas
+pip install -r requirements.txt
 ```
+
+This installs PyTorch with CUDA 11.8 support (`torch==2.7.1+cu118`,
+`torchvision==0.22.1+cu118`), HuggingFace `transformers` and `accelerate`, OpenCV,
+Matplotlib, Pandas, NumPy, Open3D and Trimesh (for 3D mesh inspection), MoviePy (for
+the psychophysics video export), and the supporting Jupyter stack. If a different CUDA
+version is needed, install PyTorch separately first using the index URL for that version,
+then run `pip install -r requirements.txt` to fill in the rest.
 
 ### Installing Depth Anything V3 (local inference)
 
@@ -263,13 +267,13 @@ compare_single_image(
 
 ### Curated illusion dataset
 
-The baseline dataset in `data/dataset/` contains 34 images organised into five categories.
+The baseline dataset in `data/dataset/` contains 28 images organised into five categories.
 Each category tests a distinct type of spatial prior:
 
-- **Converging lines:** Corridor Illusion, Ponzo Illusion, Kanizsa Triangle, Muller-Lyer Illusion
-- **Depth ambiguity:** Necker Cube, Schroeder Stairs, Dazzle Camouflage, Eiffel Tower
+- **Converging lines:** Corridor Illusion, Ponzo Illusion, Kanizsa Triangle, Muller-Lyer Illusion, Figure-Ground
+- **Depth ambiguity:** Necker Cube, Schroeder Stairs, Dazzle Camouflage, Eiffel Tower, Sun Silhouette
 - **Forced perspective:** Ames Room, Beuchet Chair, Salar de Uyuni, Anamorphic Hole, Escaping Criticism (Borrell del Caso), Leaning Tower
-- **Impossible objects:** Penrose Triangle, Escher Cube, Escher Waterfall, Blivet Trident, Reutersvard Triangle
+- **Impossible objects:** Penrose Triangle, Escher Cube, Escher Waterfall (including a Blender reconstruction), Blivet Trident, Reutersvard Triangle
 - **Shading and illumination:** Gardner Dragon, Hollow Face, Crater Dome, Cornsweet Illusion, Kersten Shadow Effect, Zebra Crossing, Coloured Circles (Akiyoshi)
 
 ### Synthetic Corridor Illusion variants
@@ -398,13 +402,13 @@ training regime.
 
 ## Report
 
-The final report is in `report/tfg_final_report.tex`. It follows the UAB/IEEE article
+The final report is in `reports/tfg_final_report.tex`. It follows the UAB/IEEE article
 format with a maximum of 12 pages plus references and appendix.
 
 To compile:
 
 ```bash
-cd report
+cd reports
 pdflatex tfg_final_report.tex
 pdflatex tfg_final_report.tex
 ```
@@ -415,13 +419,13 @@ Run twice to resolve cross-references. Alternatively, use latexmk:
 latexmk -pdf tfg_final_report.tex
 ```
 
-Figure files should be placed in `report/figures/` using the placeholder filenames
+Figure files should be placed in `reports/figures/` using the placeholder filenames
 defined in the .tex source.
 
 The two earlier deliverables submitted during the semester, the Initial Report and the
-Progress Report, are kept as PDFs in `reports/Initial_Report.pdf` and
+Progress Report, are kept as PDFs alongside it: `reports/Initial_Report.pdf` and
 `reports/Progress_report.pdf`. They document the evolution of the project's objectives
-and methodology, and are included in the dossier alongside the final report.
+and methodology, and are included in the dossier together with the final report.
 
 ---
 
