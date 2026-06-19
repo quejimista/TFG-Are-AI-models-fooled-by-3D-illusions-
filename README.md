@@ -2,7 +2,7 @@
 
 Final Degree Project in Artificial Intelligence
 Escola d'Enginyeria (EE), Universitat Autonoma de Barcelona (UAB)
-Academic Year 2024/25
+Academic Year 2025/26
 
 Author: Ivan Martin Campoy (1673246@uab.cat)
 Supervisor: Alexandra Gomez Villa
