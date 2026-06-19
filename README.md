@@ -129,12 +129,6 @@ TFG/
 |   |       `-- psychophysics/    Includes its own tfg_roi_metrics.csv for MiDaS
 |   |-- psychophysics_analysis/   PSE/JND comparison plots for V1, V2 and V3
 |   |                             (comp_*, comp_pse_*, comparison_* per experiment)
-|   |-- psychophysics/
-|   |   `-- midas/                PSE/JND comparison plots for MiDaS, one subfolder per
-|   |                             experiment (angle, blur_bias, contrast, ebbinghaus,
-|   |                             face_shading, figure_ground, horizon, kanizsa,
-|   |                             occlusion, ponzo, shadow_gap, size, size_vs_position,
-|   |                             texture_slant, ypos)
 |   `-- 3d_generations/           3D mesh files (.obj, .glb) from Hunyuan3D 2.1
 |
 |-- reports/
