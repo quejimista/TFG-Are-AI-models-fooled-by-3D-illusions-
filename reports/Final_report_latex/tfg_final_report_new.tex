@@ -30,7 +30,8 @@
 \usepackage{fontawesome5}
 \usepackage{hyperref}
 \usepackage{microtype}       % better justification
-
+\usepackage[capitalize]{cleveref}
+\crefname{figure}{Fig.}{Figs.}
 % ---------- Header / Footer ----------
 \usepackage{fancyhdr}
 \pagestyle{fancy}
@@ -772,7 +773,7 @@ is removed, MiDaS's bias stays roughly constant regardless of what is removed.
 
 \textbf{Voxel laboratory.} The same resistance to context removal is visible in
 the Minecraft experiments. Forced perspective stimuli (fake block, depth
-incongruence, anamorphic cube) give MiDaS the lowest average $\Delta I$ of any
+incongruence, anamorphic cube) (\cref{fig:fig_fake_block,fig:fig_depth_incongruence,fig:fig_anamorphic_cube}) give MiDaS the lowest average $\Delta I$ of any
 category ($7.9$), confirming that resistance to forced-perspective tricks is not
 unique to ViT-based architectures. Depth ambiguity stimuli average $34.1$, with
 the Necker Cube again standing out at $75.4$, the same non-resolution behaviour
@@ -1253,6 +1254,35 @@ estimation,'' in \emph{Proc. IEEE/CVF CVPR}, 2024.
   \includegraphics[width=1.02\linewidth]{figures/fig_occlusion_bias.png}
   \caption{Psychophysical analysis of the Occlusion bias. The trajectories illustrate V1's failure to resolve equality, V2's late abrupt shift, and V3's early perceptual flip ($PSE = 5.4$) triggered as the overlapping region's transparency crosses the midpoint boundary.}
   \label{fig:occlusion_bias}
+\end{figure}
+
+\subsubsection*{D. MiDaS Quantitative Psychophysical Response Profiles}
+\label{app:midas_psychophysics_curves}
+
+\begin{figure}[H]
+  \centering
+     \begin{subfigure}[b]{0.49\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/fig_midas_psy_ponzo.png}
+        \caption{Ponzo Illusion (Categorical Step)}
+        \label{fig:fig_midas_psy_ponzo}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[b]{0.49\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/fig_psy_angle.png}
+        \caption{Shading Angle (High Oscillatory Volatility)}
+        \label{fig:fig_psy_angle}
+     \end{subfigure}
+     \vspace{0.5em}
+     \begin{subfigure}[b]{0.98\linewidth}
+        \centering
+        \includegraphics[width=0.52\linewidth]{figures/fig_psy_ypos.png}
+        \caption{Height Bias (Rigid, Non-Crossing Trajectory)}
+        \label{fig:fig_psy_ypos}
+     \end{subfigure}
+  \caption{Representative psychophysical response curves for MiDaS. The plots illustrate the structural variability of the CNN backbone, contrasting sharp step transitions (Ponzo) against extreme spatial volatility (Angle) and unyielding non-crossing linear trajectories (Height).}
+  \label{fig:fig_midas_psychophysics}
 \end{figure}
 % ============================================================
 \end{document}
