@@ -382,7 +382,7 @@ produces the sharpest depth boundaries but also the noisiest edges under complex
 structure.
 
 \textbf{Depth Ambiguity.} On Schröeder's Stairs, all models converge on the statistically
-dominant interpretation (light from above). V1 fails to produce a coherent Necker's Cube
+dominant interpretation (light from above) (See fig.~\ref{fig:schroeder_stairs_map}). V1 fails to produce a coherent Necker's Cube
 interpretation; V2 partially separates the faces; V3 confidently commits to the standard
 orientation (see Fig.~\ref{fig:necker}).
 
@@ -1118,6 +1118,13 @@ estimation,'' in \emph{Proc. IEEE/CVF CVPR}, 2024.
   \includegraphics[width=0.95\linewidth]{figures/fig_ponzo_map.jpg}
   \caption{Qualitative depth maps for the Ponzo illusion across the Depth Anything variants. The output illustrates how the architectural priors interpret the height-in-field position of the top bar as an indicator of greater structural distance.}
   \label{fig:ponzo_map}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.95\linewidth]{figures/fig_schroeder_stairs_map.jpg}
+  \caption{Qualitative depth maps for the Schröeder's Stairs illusion across the Depth Anything variants. The output documents how the model architectures resolve the bistable ambiguity by systematically converging toward the statistically dominant light-from-above interpretation.}
+  \label{fig:schroeder_stairs_map}
 \end{figure}
 
 \subsubsection*{C. Quantitative Psychophysical Experiments visualizations.}
