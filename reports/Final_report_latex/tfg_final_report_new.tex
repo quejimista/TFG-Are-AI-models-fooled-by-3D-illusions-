@@ -28,7 +28,6 @@
 \usepackage{balance}         % balance last-page columns
 \usepackage{float}
 \usepackage{fontawesome5}
-\usepackage{hyperref}
 \usepackage{microtype}       % better justification
 \usepackage[capitalize]{cleveref}
 \crefname{figure}{Fig.}{Figs.}
@@ -377,8 +376,8 @@ linear interpolation of the resulting $\Delta I$ curve.
 \subsection{Qualitative Evaluation on Classical Illusions}
 
 \textbf{Converging Lines.} All three Depth Anything versions consistently assign greater
-depth (darker pixels) to the geometrically \emph{higher} object in the Corridor (Fig. \ref{fig:corridor}) and Ponzo
-illusion (Fig. \ref{fig:ponzo_map}), mirroring the human tendency to interpret height-in-field as distance. V3
+depth (darker pixels) to the geometrically \emph{higher} object in the Corridor (Fig.~\ref{fig:corridor}) and Ponzo
+illusion (Fig.~\ref{fig:ponzo_map}), mirroring the human tendency to interpret height-in-field as distance. V3
 produces the sharpest depth boundaries but also the noisiest edges under complex
 structure.
 
@@ -905,7 +904,9 @@ notable differences between convolutional and transformer-based systems.
 Furthermore, architectural design plays a key role in shaping the trade-off
 between semantic understanding and geometric robustness. Finally, the study
 highlights that these biases are structural rather than data-dependent, as they
-persist across synthetic voxel environments. Table~\ref{tab:model_priors_summary} condenses these findings into a single comparison across all four models. \newline
+persist across synthetic voxel environments. Table~\ref{tab:model_priors_summary} condenses these findings into a single comparison across all four models.
+
+
 
 
 \begin{table}[htbp]
@@ -1147,7 +1148,7 @@ estimation,'' in \emph{Proc. IEEE/CVF CVPR}, 2024.
   \label{fig:fig_depth_incongruence}
 \end{figure}
 
-\subsubsection*{B. Quantitative Psychophysical Experiments visualizations.}
+\subsubsection*{B. Quantitative Psychophysical Experiments Visualizations.}
 \label{app:psychophysics_curves}
 \textbf{Psychophysical Response Profiles.} This subsection aggregates the complete set of behavioral curves tracking the depth delta ($\Delta I = \text{Target} - \text{Context}$) across the incremental 30-frame stimulus evolution sequences. These plots isolate the precise boundaries where each model family shifts its perceptual ordering, defining the empirical foundation for the reported PSE and JND thresholds.
 
