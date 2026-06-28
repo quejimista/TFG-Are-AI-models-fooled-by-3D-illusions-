@@ -3,3 +3,13 @@
 *.pth
 *.bin
 *.onnx
+#latex temporal stuff
+*.aux
+*.log
+*.toc
+*.out
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+*.blg
+*.bbl
