@@ -377,7 +377,7 @@ linear interpolation of the resulting $\Delta I$ curve.
 
 \textbf{Converging Lines.} All three Depth Anything versions consistently assign greater
 depth (darker pixels) to the geometrically \emph{higher} object in the Corridor (Fig. \ref{fig:corridor}) and Ponzo
-illusion (Fig. \ref{fig:ponzobias}), mirroring the human tendency to interpret height-in-field as distance. V3
+illusion (Fig. \ref{fig:ponzo}), mirroring the human tendency to interpret height-in-field as distance. V3
 produces the sharpest depth boundaries but also the noisiest edges under complex
 structure.
 
@@ -394,7 +394,7 @@ orientation (see Fig.~\ref{fig:necker}).
 \end{figure}
 
 \textbf{Forced Perspective.} This category is where VFMs are most robust. On the Ames
-Room and Beuchet's Chair, all three versions correctly identify that geometrically separate
+Room (Fig. \ref{fig:forced_perspective_combined}) and Beuchet's Chair (Fig. \ref{fig:Beuchet}), all three versions correctly identify that geometrically separate
 elements are at different depths. Notably, V3 fails on the Salar de Uyuni image, grouping
 distant figures with a nearby person, suggesting that semantic context can override
 geometric reasoning (Fig.~\ref{fig:forced_perspective_combined}).
@@ -711,7 +711,6 @@ Occlusion     & n/a / n/a     & 19.8 / n/a    & 5.4 / 23.0 \\
 
 \begin{figure}[H]
   \centering
-  % Asumo que la imagen se llama fig_ponzo_bias, cámbialo si es distinto
   \includegraphics[width=\linewidth]{figures/fig_ponzo_bias}
   \caption{Ponzo bias experiment. All three models exhibit a highly consistent Point of Subjective Equality (PSE) around frames 16--17. However, transition steepness varies significantly: V1 and V2 display sharp transitions (low JND), whereas V3 exhibits a much larger JND, indicating a less sharp decision boundary once local context becomes ambiguous.}
   \label{fig:ponzobias}
@@ -1094,7 +1093,32 @@ estimation,'' in \emph{Proc. IEEE/CVF CVPR}, 2024.
 
 \section*{Appendix}
 
+\subsubsection*{A. Original Stimuli Collection}
 
+\textbf{Optical Illusions.} Collection of the different optical illusions evaluated within this work to map structural biases.
 
+\textbf{(1) Baseline Dataset.} Images from the original curated dataset across distinct structural categories:
+
+\begin{itemize}
+    \item \textit{Converging Lines (Linear Perspective):} Stimuli such as the Ponzo illusion that exploit vanishing points to define a perceived distance.
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.95\linewidth]{figures/fig_ponzo.png}
+        \caption{The classical Ponzo Illusion stimulus. Two identical horizontal bars are placed within converging lines, which naturally simulate distance and a vanishing point.}
+        \label{fig:ponzo}
+    \end{figure}
+
+    \item \textit{Depth Ambiguity:} Bistable projections, including the Necker Cube and Schröeder's Stairs, that admit multiple valid 3D interpretations.
+    \item \textit{Forced Perspective:} Monocular viewpoint configurations, such as the Ames Room, designed to intentionally introduce scale anomalies.
+\end{itemize}
+
+\subsubsection*{B. Model Output Visualizations: Qualitative Depth Maps}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1.05\linewidth]{figures/fig_beuchet.jpg}
+  \caption{Qualitative depth maps for the Beuchet Chair illusion across Depth Anything variants (V1, V2, and V3).}
+  \label{fig:Beuchet}
+\end{figure}
 % ============================================================
 \end{document}
