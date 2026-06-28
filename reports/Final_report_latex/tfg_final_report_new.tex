@@ -383,7 +383,7 @@ produces the sharpest depth boundaries but also the noisiest edges under complex
 structure.
 
 \textbf{Depth Ambiguity.} On Schröeder's Stairs, all models converge on the statistically
-dominant interpretation (light from above) (See fig.~\ref{fig:schroeder_stairs_map}). V1 fails to produce a coherent Necker's Cube
+dominant interpretation (light from above) (See Fig.~\ref{fig:schroeder_stairs_map}). V1 fails to produce a coherent Necker's Cube
 interpretation; V2 partially separates the faces; V3 confidently commits to the standard
 orientation (see Fig.~\ref{fig:necker}).
 
@@ -846,7 +846,7 @@ comparatively sharp as well, while blur bias (PSE $=16.1$, JND $=11.5$) and hori
 noisiest of the group (PSE $=55.5$, JND $=108.3$), with $\Delta I$ oscillating
 repeatedly between positive and negative values rather than following a single clear
 trend, which inflates the JND well beyond anything observed for V1, V2 or V3 on a
-comparable experiment (\cref{fig:fig_midas_psy_ponzo,fig:fig_psy_angle})..
+comparable experiment (\cref{fig:fig_midas_psy_ponzo,fig:fig_psy_angle}).
 
 Overall, MiDaS's psychophysical responses are considerably more variable in shape from
 one experiment to another than those of V1, V2 or V3: some categories (Ponzo, occlusion,
@@ -1094,19 +1094,7 @@ estimation,'' in \emph{Proc. IEEE/CVF CVPR}, 2024.
 
 \section*{Appendix}
 
-\subsubsection*{A. Original Stimuli Collection}
-
-\textbf{Optical Illusions.} Collection of the different optical illusions evaluated within this work to map structural biases.
-
-\textbf{(1) Baseline Dataset.} Images from the original curated dataset across distinct structural categories:
-
-\begin{itemize}
-    \item \textit{Converging Lines (Linear Perspective):} Stimuli such as the Ponzo illusion that exploit vanishing points to define a perceived distance.
-    \item \textit{Depth Ambiguity:} Bistable projections, including the Necker Cube and Schröeder's Stairs, that admit multiple valid 3D interpretations.
-    \item \textit{Forced Perspective:} Monocular viewpoint configurations, such as the Ames Room, designed to intentionally introduce scale anomalies.
-\end{itemize}
-
-\subsubsection*{B. Model Output Visualizations: Qualitative Depth Maps}
+\subsubsection*{A. Model Output Visualizations: Qualitative Depth Maps}
 \begin{figure}[H]
   \centering
   \includegraphics[width=1.05\linewidth]{figures/fig_beuchet.jpg}
@@ -1159,7 +1147,7 @@ estimation,'' in \emph{Proc. IEEE/CVF CVPR}, 2024.
   \label{fig:fig_depth_incongruence}
 \end{figure}
 
-\subsubsection*{C. Quantitative Psychophysical Experiments visualizations.}
+\subsubsection*{B. Quantitative Psychophysical Experiments visualizations.}
 \label{app:psychophysics_curves}
 \textbf{Psychophysical Response Profiles.} This subsection aggregates the complete set of behavioral curves tracking the depth delta ($\Delta I = \text{Target} - \text{Context}$) across the incremental 30-frame stimulus evolution sequences. These plots isolate the precise boundaries where each model family shifts its perceptual ordering, defining the empirical foundation for the reported PSE and JND thresholds.
 
