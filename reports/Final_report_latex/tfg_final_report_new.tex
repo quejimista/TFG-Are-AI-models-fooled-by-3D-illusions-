@@ -377,7 +377,7 @@ linear interpolation of the resulting $\Delta I$ curve.
 
 \textbf{Converging Lines.} All three Depth Anything versions consistently assign greater
 depth (darker pixels) to the geometrically \emph{higher} object in the Corridor (Fig. \ref{fig:corridor}) and Ponzo
-illusion (Fig. \ref{fig:ponzo}), mirroring the human tendency to interpret height-in-field as distance. V3
+illusion (Fig. \ref{fig:ponzo_map}), mirroring the human tendency to interpret height-in-field as distance. V3
 produces the sharpest depth boundaries but also the noisiest edges under complex
 structure.
 
@@ -1101,14 +1101,6 @@ estimation,'' in \emph{Proc. IEEE/CVF CVPR}, 2024.
 
 \begin{itemize}
     \item \textit{Converging Lines (Linear Perspective):} Stimuli such as the Ponzo illusion that exploit vanishing points to define a perceived distance.
-
-    \begin{figure}[H]
-        \centering
-        \includegraphics[width=0.95\linewidth]{figures/fig_ponzo.png}
-        \caption{The classical Ponzo Illusion stimulus. Two identical horizontal bars are placed within converging lines, which naturally simulate distance and a vanishing point.}
-        \label{fig:ponzo}
-    \end{figure}
-
     \item \textit{Depth Ambiguity:} Bistable projections, including the Necker Cube and Schröeder's Stairs, that admit multiple valid 3D interpretations.
     \item \textit{Forced Perspective:} Monocular viewpoint configurations, such as the Ames Room, designed to intentionally introduce scale anomalies.
 \end{itemize}
@@ -1119,6 +1111,13 @@ estimation,'' in \emph{Proc. IEEE/CVF CVPR}, 2024.
   \includegraphics[width=1.05\linewidth]{figures/fig_beuchet.jpg}
   \caption{Qualitative depth maps for the Beuchet Chair illusion across Depth Anything variants (V1, V2, and V3).}
   \label{fig:Beuchet}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.95\linewidth]{figures/fig_ponzo_map.jpg}
+  \caption{Qualitative depth maps for the Ponzo illusion across the Depth Anything variants. The output illustrates how the architectural priors interpret the height-in-field position of the top bar as an indicator of greater structural distance.}
+  \label{fig:ponzo_map}
 \end{figure}
 
 \subsubsection*{C. Quantitative Psychophysical Experiments visualizations.}
