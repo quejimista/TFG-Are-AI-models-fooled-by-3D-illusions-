@@ -164,7 +164,7 @@ TFG/
 ```
 
 `reports/` holds all written deliverables submitted throughout the semester: the Proposal,
-the Initial Report, and the Progress Report as PDFs, a packaged submission `.zip`, and the
+the Initial Report, and the Progress Report as PDFs, and the
 final report as a LaTeX project under `Final_report_latex/` (compiled to PDF before
 submission) together with the figures it references.
 
