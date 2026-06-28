@@ -98,28 +98,43 @@ TFG/
 |
 |-- data/
 |   |-- dataset/                  Curated 3D illusion dataset (28 original stimulus images)
-|   |-- synthetic/                Fifteen synthetic variants of the Corridor Illusion
+|   |   |-- converging/          (5 images)
+|   |   |-- depth_ambiguity/     (5 images)
+|   |   |-- forced_perspective/ (6 images)
+|   |   |-- impossible_objects/ (5 images)
+|   |   `-- shading/             (7 images)
+|   |-- synthetic/
+|   |   `-- corridor_illusion/   Fifteen synthetic variants of the Corridor Illusion
 |   |-- minecraft/                Voxel laboratory screenshots captured in Minecraft, with
-|   |                             a Settings_Configuration.txt documenting render settings
-|   `-- psychophysics/            Auto-generated stimulus sequences (30 frames per experiment)
+|   |   |                         a Settings_Configuration.txt documenting render settings
+|   |   |-- converging_lines/
+|   |   |-- depth_ambiguity/
+|   |   |-- forced_perspective/
+|   |   |-- impossible_objects/
+|   |   `-- shading/
+|   `-- psychophysics/            Auto-generated stimulus sequences (30 frames per experiment,
+|                                  one subfolder per experiment, e.g. ponzo_bias/, height_bias/)
 |
 |-- results/
 |   |-- depth_map_comparisons/    Side-by-side depth map outputs (original + V1 + V2 + V3)
-|   |   |-- baseline_dataset/     Classic illusion dataset (28 images)
+|   |   |-- baseline_dataset/     Classic illusion dataset, by category (28 images)
 |   |   |-- synthetic/            Corridor Illusion ablation (one image per variant)
-|   |   |-- minecraft/            Minecraft experiments
+|   |   |-- minecraft/            Minecraft experiments, by category
 |   |   |-- psychophysics/        Psychophysics sequences (30 frames x 15 experiments)
 |   |   `-- midas/                MiDaS outputs, same subcategory structure as above
 |   |       |-- baseline_dataset/
 |   |       |-- synthetic/
 |   |       |-- minecraft/
-|   |       `-- psychophysics/
+|   |       `-- psychophysics/    (uses MiDaS-specific experiment names, e.g. ypos,
+|   |                              face_shading, shadow_gap -- see note below)
 |   |-- roi_analysis/             ROI bounding-box annotations and CSV metric exports
-|   |   |-- baseline_dataset/     Annotated images with mean intensity per ROI
+|   |   |-- baseline_dataset/     Annotated images with mean intensity per ROI, by category
 |   |   |-- synthetic/
+|   |   |-- minecraft/            Annotated Minecraft experiments, by category
 |   |   |-- psychophysics/
 |   |   |   |-- frames/           Per-frame ROI annotations (one subfolder per experiment)
-|   |   |   |-- summary/          Per-experiment summary plots
+|   |   |   |-- summary/          Per-experiment PSE/JND comparison plots
+|   |   |   |                     (psychophysics_<experiment>.png, one per experiment)
 |   |   |   |-- videos/           MP4 export of each psychophysics sequence
 |   |   |   `-- tfg_roi_metrics.csv   Metrics database for V1/V2/V3 (Depth Anything)
 |   |   `-- midas/                Same structure as above, for MiDaS
@@ -127,25 +142,31 @@ TFG/
 |   |       |-- synthetic/
 |   |       |-- minecraft/
 |   |       `-- psychophysics/    Includes its own tfg_roi_metrics.csv for MiDaS
-|   |-- psychophysics_analysis/   PSE/JND comparison plots for V1, V2 and V3
-|   |                             (comp_*, comp_pse_*, comparison_* per experiment)
 |   `-- 3d_generations/           3D mesh files (.obj, .glb) from Hunyuan3D 2.1
 |
 |-- reports/
-|   |-- Initial_Report.pdf        First delivery: motivation, objectives, state of the art,
-|   |                             methodology and work plan
-|   |-- Progress_report.pdf       Second delivery: work performed, results obtained up to
-|   |                             that point, and updated hypotheses
-|   |-- tfg_final_report.tex      Final report in UAB/IEEE format (max 12 pages + references)
-|   `-- figures/                  Image files referenced by the .tex via \includegraphics
+|   |-- Initial_Report.pdf            First delivery: motivation, objectives, state of the
+|   |                                 art, methodology and work plan
+|   |-- Progress_report.pdf           Second delivery: work performed, results obtained up
+|   |                                 to that point, and updated hypotheses
+|   |-- TFG_Ivan_Martin PROPOSAL.pdf  Initial project proposal
+|   |-- TFG_Ivan_Martin.zip           Packaged submission archive
+|   `-- Final_report_latex/           Final report LaTeX project
+|       |-- tfg_final_report_new.tex  Final report source (UAB/IEEE format, max 12 pages
+|       |                             plus references and appendix)
+|       |-- figures/                  Image files referenced by the .tex via \includegraphics
+|       |-- main.bib, IEEEtran.bst    Bibliography database and style (currently unused; the
+|       |                             report defines references manually via \bibitem)
+|       `-- *.aux, *.log, *.fls, ...  LaTeX build artifacts, safe to delete and regenerate
 |
 `-- external/
     `-- depth-anything-3/         Depth Anything V3 source code (official repository)
 ```
 
-`reports/` holds all three written deliverables submitted throughout the semester: the
-Initial Report and Progress Report as PDFs, and the final report as a `.tex` source
-(compiled to PDF before submission) together with the figures it references.
+`reports/` holds all written deliverables submitted throughout the semester: the Proposal,
+the Initial Report, and the Progress Report as PDFs, a packaged submission `.zip`, and the
+final report as a LaTeX project under `Final_report_latex/` (compiled to PDF before
+submission) together with the figures it references.
 
 ---
 
@@ -346,10 +367,12 @@ are recorded per frame. The curve is modelled via linear interpolation to comput
 
 A low JND (steep curve) indicates high sensitivity; a high JND indicates robustness.
 
-The cross-model comparison plots (files named comp_* and comparison_*) are saved to
-`results/psychophysics/`. These show the PSE and JND curves for all models side by side
-and are distinct from the ROI bounding-box outputs in `results/roi_analysis/` and the
-raw depth map comparisons in `results/depth_map_comparisons/`.
+The cross-model comparison plots, one per experiment (named `psychophysics_<experiment>.png`,
+for example `psychophysics_ponzo_bias.png`), are saved to
+`results/roi_analysis/psychophysics/summary/`. These show the PSE and JND curves for all
+models side by side and are distinct from the per-frame ROI bounding-box outputs in
+`results/roi_analysis/psychophysics/frames/` and the raw depth map comparisons in
+`results/depth_map_comparisons/psychophysics/`.
 
 ### Step 4: 3D mesh validation
 
@@ -396,30 +419,34 @@ training regime.
 
 ## Report
 
-The final report is in `reports/tfg_final_report.tex`. It follows the UAB/IEEE article
-format with a maximum of 12 pages plus references and appendix.
+The final report is in `reports/TFG_FINAL_report.pdf`. It follows
+the UAB/IEEE article format with a maximum of 12 pages plus references and appendix.
 
 To compile:
 
 ```bash
-cd reports
-pdflatex tfg_final_report.tex
-pdflatex tfg_final_report.tex
+cd reports/Final_report_latex
+pdflatex tfg_final_report_new.tex
+pdflatex tfg_final_report_new.tex
 ```
 
 Run twice to resolve cross-references. Alternatively, use latexmk:
 
 ```bash
-latexmk -pdf tfg_final_report.tex
+latexmk -pdf tfg_final_report_new.tex
 ```
 
-Figure files should be placed in `reports/figures/` using the placeholder filenames
-defined in the .tex source.
+Figure files should be placed in `reports/Final_report_latex/figures/` using the
+placeholder filenames defined in the .tex source. The folder also contains a
+`main.bib`/`IEEEtran.bst` pair left over from an earlier BibTeX-based draft; the current
+`.tex` defines all references manually via `\bibitem` and does not use them, so they can
+be ignored or removed.
 
-The two earlier deliverables submitted during the semester, the Initial Report and the
-Progress Report, are kept as PDFs alongside it: `reports/Initial_Report.pdf` and
-`reports/Progress_report.pdf`. They document the evolution of the project's objectives
-and methodology, and are included in the dossier together with the final report.
+The other deliverables submitted during the semester, the Proposal, the Initial Report
+and the Progress Report, are kept as PDFs alongside it: `reports/TFG_Ivan_Martin
+PROPOSAL.pdf`, `reports/Initial_Report.pdf` and `reports/Progress_report.pdf`. They
+document the evolution of the project's objectives and methodology, and are included in
+the dossier together with the final report.
 
 ---
 
